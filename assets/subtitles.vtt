@@ -1,0 +1,392 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.970
+- In the last video,
+
+2
+00:00:00.970 --> 00:00:02.660
+I talked all about the window object
+
+3
+00:00:02.660 --> 00:00:04.680
+and how you can pretty much
+just ignore it completely.
+
+4
+00:00:04.680 --> 00:00:05.520
+And in this video,
+
+5
+00:00:05.520 --> 00:00:07.220
+we wanna talk about the document object,
+
+6
+00:00:07.220 --> 00:00:10.060
+which is incredibly useful
+all across programming
+
+7
+00:00:10.060 --> 00:00:11.230
+in the browser.
+
+8
+00:00:11.230 --> 00:00:13.313
+So to see exactly what
+this document object is,
+
+9
+00:00:13.313 --> 00:00:16.017
+let's just console.log out document,
+
+10
+00:00:16.017 --> 00:00:17.820
+and we just type in document.
+
+11
+00:00:17.820 --> 00:00:20.824
+This is exactly the same as
+if we typed window.document.
+
+12
+00:00:20.824 --> 00:00:23.950
+They're both the same thing we
+can just use document though,
+
+13
+00:00:23.950 --> 00:00:26.510
+or window.document it's going
+to print the same thing.
+
+14
+00:00:26.510 --> 00:00:27.343
+As you can see,
+
+15
+00:00:27.343 --> 00:00:29.298
+it prints out this weird
+like hashtag document.
+
+16
+00:00:29.298 --> 00:00:30.311
+And when we open this up,
+
+17
+00:00:30.311 --> 00:00:31.630
+you're gonna see document
+
+18
+00:00:31.630 --> 00:00:34.370
+is essentially just all
+of the html for our page.
+
+19
+00:00:34.370 --> 00:00:36.800
+You can see this is the exact HTML
+
+20
+00:00:36.800 --> 00:00:39.860
+of our entire page from
+this index.html here.
+
+21
+00:00:39.860 --> 00:00:42.463
+So it's printing out the HML of our page
+
+22
+00:00:42.463 --> 00:00:43.479
+and that's really useful
+
+23
+00:00:43.479 --> 00:00:45.900
+because the document
+allows us to get elements
+
+24
+00:00:45.900 --> 00:00:46.733
+from our HTML.
+
+25
+00:00:46.733 --> 00:00:48.660
+It allows us to modify our HTML,
+
+26
+00:00:48.660 --> 00:00:50.658
+create new elements to add into our HTML.
+
+27
+00:00:50.658 --> 00:00:54.375
+It's really the way you interact
+with the HTML of your page.
+
+28
+00:00:54.375 --> 00:00:56.450
+So for example, if we wanna get the body,
+
+29
+00:00:56.450 --> 00:00:58.157
+we could say document.body,
+
+30
+00:00:58.157 --> 00:00:59.620
+and this is going to give us
+
+31
+00:00:59.620 --> 00:01:01.493
+that body element of our document.
+
+32
+00:01:01.493 --> 00:01:04.620
+We could also get for
+example, document element,
+
+33
+00:01:04.620 --> 00:01:06.925
+and this is going to give
+us just the HTML portion
+
+34
+00:01:06.925 --> 00:01:08.047
+of our document.
+
+35
+00:01:08.047 --> 00:01:10.990
+You can notice when we
+had just document here,
+
+36
+00:01:10.990 --> 00:01:12.586
+it also gave us this doc type at the top,
+
+37
+00:01:12.586 --> 00:01:14.728
+but if we just wanna get the HTML element
+
+38
+00:01:14.728 --> 00:01:16.530
+and everything inside of it,
+
+39
+00:01:16.530 --> 00:01:18.774
+that's what document
+element is used for it.
+
+40
+00:01:18.774 --> 00:01:21.350
+Now, I also mentioned that
+you can create elements
+
+41
+00:01:21.350 --> 00:01:23.730
+with document.create element.
+
+42
+00:01:23.730 --> 00:01:24.563
+So let's just come in here
+
+43
+00:01:24.563 --> 00:01:26.035
+and we're gonna create a new element
+
+44
+00:01:26.035 --> 00:01:29.101
+and we're gonna set it equal
+to document.create element.
+
+45
+00:01:29.101 --> 00:01:30.410
+And this is a function.
+
+46
+00:01:30.410 --> 00:01:31.709
+And all you do is pass
+the name of the tag.
+
+47
+00:01:31.709 --> 00:01:33.777
+So you can create, for example, a div
+
+48
+00:01:33.777 --> 00:01:35.738
+or you can create a span,
+whatever you want to create.
+
+49
+00:01:35.738 --> 00:01:37.883
+We'll just create a
+span here, for example.
+
+50
+00:01:37.883 --> 00:01:39.862
+And then we can take our element.
+
+51
+00:01:39.862 --> 00:01:42.130
+And if we wanna put some
+text inside of this,
+
+52
+00:01:42.130 --> 00:01:43.569
+we'll say dot innertext,
+
+53
+00:01:43.569 --> 00:01:45.568
+'cause now we have access to an element
+
+54
+00:01:45.568 --> 00:01:47.363
+and to specify the
+texts we say, innertext,
+
+55
+00:01:47.363 --> 00:01:50.570
+and we'll just set it
+equal to Hello World.
+
+56
+00:01:50.570 --> 00:01:53.140
+And now we just wanna add
+that to our document body.
+
+57
+00:01:53.140 --> 00:01:55.489
+So we can say document.body,
+
+58
+00:01:55.489 --> 00:01:57.330
+'cause this is where
+we're gonna add this too.
+
+59
+00:01:57.330 --> 00:01:58.880
+We could say dot appendchild
+
+60
+00:01:58.880 --> 00:02:01.810
+and we pass in the element we want to add,
+
+61
+00:02:01.810 --> 00:02:03.397
+which in our case is this
+element we just created.
+
+62
+00:02:03.397 --> 00:02:06.350
+We're going to append it
+to the end of the body
+
+63
+00:02:06.350 --> 00:02:07.480
+of our document.
+
+64
+00:02:07.480 --> 00:02:08.312
+We click save.
+
+65
+00:02:08.312 --> 00:02:09.458
+You'll notice nothing gets printed out,
+
+66
+00:02:09.458 --> 00:02:11.410
+but if I pull over the page,
+
+67
+00:02:11.410 --> 00:02:12.820
+you'll see that Hello
+World has been appended
+
+68
+00:02:12.820 --> 00:02:14.930
+to the end of our document.
+
+69
+00:02:14.930 --> 00:02:15.763
+If I just shrink this down,
+
+70
+00:02:15.763 --> 00:02:16.930
+so it's on the right side of our screen.
+
+71
+00:02:16.930 --> 00:02:19.216
+And I changed this to like,
+Hello World 2 and save.
+
+72
+00:02:19.216 --> 00:02:21.643
+You can now see it reruns
+and re-adds this element
+
+73
+00:02:21.643 --> 00:02:23.523
+with the text, Hello World 2.
+
+74
+00:02:23.523 --> 00:02:25.173
+So this document is super powerful
+
+75
+00:02:25.173 --> 00:02:27.730
+and is really the gateway into interacting
+
+76
+00:02:27.730 --> 00:02:29.660
+with everything inside of our browser,
+
+77
+00:02:29.660 --> 00:02:31.530
+creating elements, selecting elements,
+
+78
+00:02:31.530 --> 00:02:33.360
+adding events, modifying things,
+
+79
+00:02:33.360 --> 00:02:35.582
+it's all done through
+this document object here.
+
+80
+00:02:35.582 --> 00:02:37.010
+And in the next few videos,
+
+81
+00:02:37.010 --> 00:02:38.450
+I'm gonna explore all the different ways
+
+82
+00:02:38.450 --> 00:02:40.670
+you can use this document
+object in more depth,
+
+83
+00:02:40.670 --> 00:02:41.824
+but this video was really just a precursor
+
+84
+00:02:41.824 --> 00:02:43.639
+to what the document object is
+
+85
+00:02:43.639 --> 00:02:46.870
+and how you can use it to
+just create a simple element.
+
+86
+00:02:46.870 --> 00:02:47.703
+So in the next video,
+
+87
+00:02:47.703 --> 00:02:49.410
+I'm gonna show you how you
+can select elements using
+
+88
+00:02:49.410 --> 00:02:52.220
+their ID and their class
+with this document object.
+
+89
+00:02:52.220 --> 00:02:54.320
+And I can't wait to see you in that video.
