@@ -108,12 +108,17 @@ function changePlaybackSpeed() {
 }
 
 // Captions
-const captions = video.textTracks[0]
-captions.mode = "hidden"
-
-captionsBtn.addEventListener("click", toggleCaptions)
+if (video.textTracks.length == 0){
+  captionsBtn.style.display = "none"
+}
+else{
+  const captions = video.textTracks[0]
+  captions.mode = "hidden"
+  captionsBtn.addEventListener("click", toggleCaptions)
+}
 
 function toggleCaptions() {
+  const captions = video.textTracks[0]
   const isHidden = captions.mode === "hidden"
   captions.mode = isHidden ? "showing" : "hidden"
   videoContainer.classList.toggle("captions", isHidden)
