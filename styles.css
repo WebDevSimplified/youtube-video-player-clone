@@ -256,3 +256,12 @@ video {
 .timeline-container:hover .timeline {
   height: 100%;
 }
+
+.volume-slider{
+  /*accent-color: red;*/
+  accent-color: red;
+}
+
+.current-time{
+  font-family:'Times New Roman', Times, serif ;
+}
